@@ -1,0 +1,7 @@
+string(APPEND FFLAGS " -I$(NETCDF_FORTRAN_PATH)/include")
+string(APPEND SLIBS " -L$(NETCDF_FORTRAN_PATH)/lib -L$(NETCDF_C_PATH)/lib -Wl,-rpath,$(NETCDF_FORTRAN_PATH)/lib -Wl,-rpath,$(NETCDF_C_PATH)/lib")
+string(APPEND SLIBS " -Wl,-rpath,$(PNETCDF_PATH)/lib")
+string(APPEND SLIBS " -Wl,-rpath,$(MKLROOT)/lib/intel64")
+string(APPEND SLIBS " -L/sw/spack-levante/xerces-c-3.2.3-ostlph/lib -Wl,-rpath,/sw/spack-levante/xerces-c-3.2.3-ostlph/lib")
+set(AR "xiar")
+set(ARFLAGS "cru")
